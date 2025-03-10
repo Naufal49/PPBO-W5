@@ -3,7 +3,7 @@ class AkunGame:
         self.username = username
         self.saldo_diamond = saldo_diamond 
 
-    def __mul__(self, topup):
+    def __add__(self, topup):
         print("Top-up diamond:", topup.jumlah, "diamond")
         return self.saldo_diamond + topup.jumlah
 
@@ -13,6 +13,6 @@ class TopUp:
 
 akun1 = AkunGame("Naufal", 9500)
 topup_game = TopUp(1500)
-print (f"Total diamond {akun1.username}: {akun1 * topup_game} diamond")
+print (f"Total diamond {akun1.username}: {akun1 + topup_game} diamond")
 
 
